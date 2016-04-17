@@ -81,7 +81,7 @@ abstract class wp_portable_urls
                 '[siteurl ssl="true"]',
             ),
             array(
-                'http://' . $siteurl,
+                sprintf('%s://%s', is_ssl() ? 'https' : 'http', $siteurl),
                 'https://' . $siteurl,
             ),
             $content
